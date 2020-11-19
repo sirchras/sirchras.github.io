@@ -28,6 +28,10 @@ body {
     height: auto;
 }
 
+.center-text {
+    text-align: center;
+}
+
 [class*="col"] {
     padding: 0 15px 0 15px;
 }
