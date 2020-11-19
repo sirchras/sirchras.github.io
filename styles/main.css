@@ -23,6 +23,11 @@ body {
     display: flex;
 }
 
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
 [class*="col"] {
     padding: 0 15px 0 15px;
 }
