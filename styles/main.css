@@ -52,12 +52,14 @@ body {
 .blog-post {
     margin-bottom: 4rem;
 }
-/*
-.blog-post-title {
 
+.blog-post-title {
+    font-size: 2rem;
+    margin: 0 0 .5rem 0;
 }
 
 .blog-post-meta {
-
+    font-size: 1.25rem;
+    margin: 0 0 1.25rem 0;
+    color: #999;
 }
-*/
