@@ -10,6 +10,7 @@
     --red: #CC0000;
     --green: #4E9A06;
     --blue: #3465A4;
+    --mono-font: 'Ubuntu Mono', monospace;
 }
 
 body {
