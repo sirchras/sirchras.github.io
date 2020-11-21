@@ -33,6 +33,10 @@ h1, h2 {
     margin-bottom: .5rem;
 }
 
+a{
+    color: var(--blue, #3465A4)
+}
+
 .grid {
     margin: 0 auto;
     max-width: 1200px;
@@ -81,6 +85,17 @@ h1, h2 {
 
 .center-text {
     text-align: center;
+}
+
+.card {
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--grey, #555753);
+}
+
+.border-bottom {
+    padding-bottom: 5px;
+    border-bottom: solid 3px var(--l-grey, #D3D7CF);
 }
 
 .blog-post {
