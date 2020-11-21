@@ -11,6 +11,7 @@
     --green: #4E9A06;
     --blue: #3465A4;
     --mono-font: 'Ubuntu Mono', monospace;
+    --sans-font: 'Roboto', sans-serif;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
     color: var(--l-grey, #D3D7CF);
     text-align: left;
     background-color: var(--d-grey, #2E3436);
+    font-family: var(--sans-font, sans-serif);
 }
 
 header {
