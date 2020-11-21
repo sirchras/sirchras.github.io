@@ -4,11 +4,20 @@
     box-sizing: border-box;
 }
 
+:root {
+    --d-grey: #2E3436;
+    --l-grey: #D3D7CF;
+    --red: #CC0000;
+    --green: #4E9A06;
+    --blue: #3465A4;
+}
+
 body {
     font-size: 1rem;
     line-height: 1.5;
-    color: #212529;
+    color: var(--l-grey, #D3D7CF);
     text-align: left;
+    background-color: var(--d-grey, #2E3436);
 }
 
 .grid {
