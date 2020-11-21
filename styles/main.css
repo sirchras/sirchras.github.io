@@ -68,6 +68,13 @@ header h1 {
     color: var(--blue, #3465A4);
 }
 
+.title {
+    font-family: var(--mono-font, monospace);
+    font-size: 2rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
 .img-responsive {
     width: 100%;
     height: auto;
