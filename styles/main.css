@@ -60,6 +60,6 @@ body {
 
 .blog-post-meta {
     font-size: 1.25rem;
+    font-style: italic;
     margin: 0 0 1.25rem 0;
-    color: #999;
 }
