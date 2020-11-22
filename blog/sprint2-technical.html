@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>S2-Tech</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="../styles/main.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="grid">
+            <div class="row">
+                <header class="col-12">
+                    <h1 class="font-mono"><a href="../index.html"><span class="green">chris_l@github.io</span>:<span class="blue">~/blog</span>$</a></h1>
+                </header>
+            </div>
+            <div class="row">
+                <main class="col-12">
+                    <h1 class="blog-post-title font-mono">Margin, Border, and Padding</h1>
+                    <h3 class="blog-post-meta font-mono">Nov 22, 2020</h3>
+                    <p>When we want to lay out content on a webpage we invariably need to contend with the content's margin, border, and padding. In web development we tend to use an analogy of a box to illustrate how these three properties interact with each other and the content. We use this analogy so often, that it is simply referred to as the Box Model.</p>
+                    <!-- todo: add image of box model -->
+                    <p>The Box Model consists of four concentric squares, with the center-most square representing our content. With our analogy of a physical box the content would be anything you'd store in a box, but in web development this is generally text or an image.</p>
+                    <p>Surrounding the content we have padding. Padding is the space inside the box between the content and the walls of the box. In web development it is one of the ways that we can create space between things. In that way, it is similar to the space between the pizza and the roof of the pizza box, it stops everything from sticking together.</p>
+                    <!-- <p>I've used padding when writing the CSS for my blog for columns. in order to prevent the content inside a column from filling the entire width, giving some space when columns are side-by-side</p> -->
+                    <p>Enclosing the content and the padding, the third square of the Box Model, is the border. The border is used in web development to create an outline around the content of varying thicknesses and styles. In our analogy the border can be thought of as the walls of the box we've put the content in.</p>
+                    <p>The final outermost square of the Box Model is the margin. This is the space between our box, made up of the content, padding, and border, and every other box. If we imagine a few more boxes in our analogy, then the margin is like how tightly or loosely we've stacked our boxes. In web design it is the other way to create space between things, but unlike padding the space created is outside the box.</p>
+                    <!-- maybe should add examples of how I've used them in my css? -->
+                    <p>With these three properties: margin, border, and padding we are able to place content wherever we want to on a web page.</p>
+                </main>
+            </div>
+            <div class="row">
+                <footer class="col-12 center-text">
+                    <a href="#">Back to top</a>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
