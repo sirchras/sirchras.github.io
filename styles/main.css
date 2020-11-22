@@ -37,6 +37,11 @@ a{
     color: var(--blue, #3465A4)
 }
 
+h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .grid {
     margin: 0 auto;
     max-width: 1200px;
