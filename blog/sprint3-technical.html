@@ -18,12 +18,94 @@
                 <main class="col-12">
                     <h1 class="blog-post-title font-mono">Adding Interactivity: HTML, CSS, and JavaScript</h1>
                     <h3 class="blog-post-meta font-mono">Nov 29, 2020</h3>
-                    <h2>E kore e mau i a koe, he wae kai pakiaka. <em>A foot accustomed to running over roots makes the speediest runner.</em></h2>
-                    <p>Te Houtaewa was the fastest runner of his day and played many pranks on his peoples enemies. One morning his mother wanted kumara for the hangi (earth oven) and asked Te Houtaewa to go to the gardens at Te Kao, a short distance away. He agreed to fetch the kumara and told his mother to prepare the hangi.</p>
-                    <p>Instead of going to the nearby gardens, Te Houtaewa set off for Ahipara as he wanted to annoy some Te Rarawa people who lived there. Carrying two large baskets for the kumara, he ran like the wind, completing the journey over the hard sands of Te Oneroa a Tohe (Ninety Mile Beach) in the few hours it takes a good hangi to heat up properly. On reaching Ahipara, he went straight to the people's kumara pataka (storehouse for the sweet potatoes) situated at the foot of the hill Whangatauatia.</p>
-                    <p>While Te Houtaewa was filling his baskets with kumara he was spotted stealing the kai (food). He was immediately recognised.</p>
-                    <!-- this is a comment. -->
-                </main>
+                    <h3>An analogy to describe the differences between HTML and CSS</h3>
+                    <!--
+                    <p>HTML is responsible for the content of a website, including the text, images, and links. It describes the structure of the website. CSS describes the presentation of the content of a website, how the HTML document should appear when rendered by a browser.</p>
+                    <p>An analogy for ... HTML is like your body, which consists of a skeleton, musculature, and organs all of which make up the human form. CSS is like your appearance describing things like your height</p>
+                    -->
+                    <h3>Explain control flow and loops using an example process from everyday life</h3>
+                    <p>We can understand control flow as being the order in which a series of instructions is carried out. In a computer program these are code statements being executed, but we can see control flow in more mundane processes, like making tea (which I'm probably doing as you're reading this).</p>
+                    <ol>
+                        <li>Get mug and teapot, put teabags into teapot.</li>
+                        <li>Fill kettle with water, and set to boil.</li>
+                        <li>Wait until water boils.</li>
+                        <li>Pour boiled water to fill teapot</li>
+                        <li>Wait for tea to steep.</li>
+                        <li>Fish out teabags, trying not to scald fingers.</li>
+                        <li>Pour tea into awaiting mug.</li>
+                        <li>Add sugar to taste, and enjoy tea.</li>
+                    </ol>
+                    <p>In the process above, at multiple points an action is being repeated until a condition is met: waiting until the water boils, removing teabags while teabags remain in the teapot, etc. This is referred to as loop in programming.</p>
+                    
+                    <h3>Describe what the DOM is and an example of how you might interact with it.</h3>
+                    <p>The Document Object Model, or DOM, represents an HTML document as a tree structure where each node is an object that represents a part of the document. It allows programs to interact with the structure, style, and content of the document through the nodes of the tree. One way one might interact with the DOM, is to use JavaScript to change the properties of an element.</p>
+                    <!--css-->
+                    <pre>
+                        <code>
+                            .blue {
+                                color: blue;
+                            }
+                        </code>
+                    </pre>
+                    <p>Assuming the above CSS class this following JavaScript example adds the class to the first paragraph element of the document.</p>
+                    <!--js-->
+                    <pre>
+                        <code>
+                            document.getElementsByTagName("p")[0].classList.add("blue");
+                        </code>
+                    </pre>
+                    
+                    <h3>Explain the difference between accessing data from arrays and objects.</h3>
+                    <p>An object is one of the base datatypes in JavaScript. It is a list of properties, which each consist of a colon-separated key-value pair where the key is a string name, and the value can be any piece of data.</p>
+                    <!--js-->
+                    <pre>
+                        <code>
+                            let obj={
+                                "name": "Chris",
+                                "age": 26,
+                                "likes": ["cats", "coding", "pizza"],
+                            };        
+                        </code>
+                    </pre>
+                    <p>Data can be accessed from an object using bracket or dot notation by specifying the key, or property name. When using the dot notation the quotes around the property name are omitted.</p>
+                    <!--js-->
+                    <pre>
+                        <code>
+                            console.log(obj.name); // Chris
+                            console.log(obj["age"]); // 26        
+                        </code>
+                    </pre>
+                    <p>An array is a specialised object in JavaScript that is an ordered collection of data. Arrays differ from base objects in that they have an order, and are not accessed with string keys. Instead arrays use numbers as the keys, starting from 0.</p>
+                    <!--js-->
+                    <pre>
+                        <code>
+                            let arr=["cats", "coding", "pizza"];
+                        </code>
+                    </pre>
+                    <p>Data in an array can only be accessed via bracket notation by specifying the key, more commonly known as the index.</p>
+                    <!--js-->
+                    <pre>
+                        <code>
+                            console.log(arr[0]); // cats
+                        </code>
+                    </pre>
+                    
+                    <h3>Explain what functions are and why they are useful.</h3>
+                    <p>A function is one of the core components of a program. It is basically, a named collection of code. When a programmer defines a function they specify a name, an optional list of comma-separated parameters, and then the code of the function enclosed between curly braces.</p>
+                    <!--js-->
+                    <pre>
+                        <code>
+                            function sayHello() {
+                                console.log("Hello world!"); // Hello world!
+                            }
+                            
+                            function sum(x, y) {
+                                return x + y;
+                            }
+                            console.log(sum(2, 7)); // 9        
+                        </code>
+                    </pre>
+                    <p>These can then be "called" from elsewhere in the program, and reused as necessary. When called the flow of the program will pause for the function's code to run, and then continue from where it left off. Grouping code into functions is incredibly useful. In addition to reusability, they allow the programmer to repeat themself less, give them a way to organise a program, and make editing a program much easier.</p>                </main>
             </div>
             <div class="row">
                 <footer class="col-12 center-text">
