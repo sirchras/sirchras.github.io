@@ -1,35 +1,148 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Stories and Legends</title>
-        <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-        <link href="../styles/main.css" rel="stylesheet" type="text/css">
-    </head>
+<head>
+  <title>S4-Tech</title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="../styles/main.css" rel="stylesheet" type="text/css">
+</head>
 
-    <body>
-        <div class="grid">
-            <div class="row">
-                <header class="col-12">
-                    <h1 class="font-mono"><a href="../index.html"><span class="green">chris_l@github.io</span>:<span class="blue">~/blog</span>$</a></h1>
-                </header>
-            </div>
-            <div class="row">
-                <main class="col-12">
-                    <h1 class="blog-post-title font-mono">The Story of Te Houtaewa</h1>
-                    <h3 class="blog-post-meta font-mono">Nov 16, 2020</h3>
-                    <h2>E kore e mau i a koe, he wae kai pakiaka. <em>A foot accustomed to running over roots makes the speediest runner.</em></h2>
-                    <p>Te Houtaewa was the fastest runner of his day and played many pranks on his peoples enemies. One morning his mother wanted kumara for the hangi (earth oven) and asked Te Houtaewa to go to the gardens at Te Kao, a short distance away. He agreed to fetch the kumara and told his mother to prepare the hangi.</p>
-                    <p>Instead of going to the nearby gardens, Te Houtaewa set off for Ahipara as he wanted to annoy some Te Rarawa people who lived there. Carrying two large baskets for the kumara, he ran like the wind, completing the journey over the hard sands of Te Oneroa a Tohe (Ninety Mile Beach) in the few hours it takes a good hangi to heat up properly. On reaching Ahipara, he went straight to the people's kumara pataka (storehouse for the sweet potatoes) situated at the foot of the hill Whangatauatia.</p>
-                    <p>While Te Houtaewa was filling his baskets with kumara he was spotted stealing the kai (food). He was immediately recognised.</p>
-                    <!-- this is a comment. -->
-                </main>
-            </div>
-            <div class="row">
-                <footer class="col-12 center-text">
-                    <a href="#">Back to top</a>
-                </footer>
-            </div>
-        </div>
-    </body>
+<body>
+  <div class="grid">
+    <div class="row">
+      <header class="col-12">
+        <h1 class="font-mono"><a href="../index.html"><span class="green">chris_l@github.io</span>:<span class="blue">~/blog</span>$</a></h1>
+      </header>
+    </div>
+    <div class="row">
+      <main class="col-12">
+        <h1 class="blog-post-title font-mono">Problem Solving</h1>
+        <h3 class="blog-post-meta font-mono">Dec 6, 2020</h3>
+
+        <h3>1. Got blocked on a simple problem</h3>
+        <p>
+          I was trying to write a function that would take a number N and create a list of numbers starting at N and count down to 1. The added challenge was that my solution was to use a method called recursion, which is where a function calls itself from within itself. My problem was that my code didn't appear to return anything much to my confusion.
+        </p>
+
+        <p>
+          First I tried console.logging, which wound up not telling me much because the error was occuring before my print statements, but I gathered that <code>unshift</code> wasn't working the way I thought it would. Because I wasn't getting error messages I copied my code to CodePen and tried running it there: <code>"countdown(...).unshift is not a function"</code> was the result. Great, an error message, though I didn't know what that meant. In hindsight it's clearer what it was trying to tell me, but at the time the message frustrated me since I knew with absolute certainty that <code>Array.unshift()</code> was a function, and <em>assumed</em> that would always apply here.
+        </p>
+        <p>
+          So next I checked in with Google, pasting the error message in the search box. It turned out that the error message was pretty common, and occured in many <em>seemingly</em> different contexts. Overwhelmed by results that didn't seem to apply I went back to the code, and separated the <code>countdown(...).unshift</code> statement with the intent of console.logging again. Instead, what happened was that the code worked. Paradoxically this made me more annoyed.
+        </p>
+        <p>
+          At this point I took a break which took care of my frustration. But I still didn't know why the code worked now while my intial solution didn't. Curious I posted a question for my peers and coaches to see asking if anyone knew the reason why.
+        </p>
+        <p>
+          I got an answer to my question from someone, who also directed me to the MDN JavaScript documentation, where I felt pretty silly after reading the entry for <code>unshift</code>. It has however been a huge help ever since. I was reminded to be more wary of my assumptions, since the error was caused by my assuming that <code>Array.unshift</code> returned an array. This also reinforced the importance of taking a break from a problem. Once I came back calmer, it was easier to understand and process new information.
+        </p>
+
+       <h3>2. Solved a problem in an elegant way</h3>
+
+        <!-- __I would like to preface this by stating that elegance is *subjective*__ -->
+        <p>
+          I was writing a function <code>deBee</code> that would remove the word "buzz" from a string, as part of the Built-in Methods kata. I relied on the test output, reading the unit tests, and reading the MDN JS documentation.
+        </p>
+
+        <p>
+          First I tried to use a method from the MDN documentation that wasn't supported. Getting the error message: <code>str.replaceAll is not a function</code> I consulted Google. Finding a solution I return to repl.it and apply it, and now the function is passing two tests. Which is great, but the error message from the next test reveals that my function will have to deal with capitialisation.
+        </p>
+
+        <!-- ```js
+        str.split(search).join(replacement);
+        ``` -->
+
+        <p>
+          So I returned to the docs again, and look over the String methods where I notice that the <code>split</code> method could take a regular expression (regex for short) in place of a string. Okay, I vaguely remember what regexes are, a pattern able to match multiple similar strings. I skim-read the docs on regexes, and then Google for additional <a href="https://regex101.com/">help</a>
+        </p>
+        <p>
+          I start to build my regex and run into problems immediately: error messages because the <code>split</code> method isn't finding anything matching the regex. This is a little frustrating, since according to a regex tester it should work. So I start trying things, tweaking the syntax of the regex here and there, and through experimentation get the regex to work.
+        </p>
+        <p>
+          But the function is still failing the tests, and from the test output I see that while my function is successfully matching the "buzz"es, it was leaving too many spaces. I continue to try things: using various string and array methods, changing the regex to match spaces. But no matter what I either get no space between words, or multiple spaces. Confused and frustrated, I start console.logging and on a whim try passing a comma to the <code>join</code> method, and I realise the problem: the <code>split</code> function is creating empty strings between the "buzz"es it matches.
+        </p>
+        <p>
+          I use the <code>filter</code> method and remove the empty strings. All tests pass, and although I was pleased my function works and that I found the bug, some frustration lingers. I was unhappy that the first method <code>split</code> produced artifacts in the form of empty strings, it felt clumsy. I was also simultaneously annoyed by/at the regex I wrote, and attached to it for the effort I put into it. But I decide to move on and start the next kata.
+        </p>
+
+        <!-- ```js -->
+        <pre>
+          <code>
+            function deBee(str) {
+              var regex = /[ ]*[Bb][Uu][Zz]{2}[ ]*/;
+              return str.split(regex)
+                        .filter(s => s.length > 0)
+                        .join(" ");
+            }
+          </code>
+        </pre>
+
+        <p>
+          It's after I finish all the katas, when I start reflecting on what I'd change or refactor, that I get an itch to go back. With what felt like a lot of clarity after the first time, I rewrote <code>deBee</code>. I simplified the regex and the <code>split</code> operation, and combined the regex, <code>filter</code>, and a string method <code>match</code> to remove "buzz"es.
+        </p>
+
+        <!-- ```js -->
+        <pre>
+          <code>
+            function deBee(str) {
+              var regex = /[Bb][Uu][Zz]{2}/;
+              return str.split(" ")
+                        .filter(s => !s.match(regex))
+                        .join(" ");
+            }
+          </code>
+        </pre>
+        <!-- caption: __I would like to reiterate that elegance is *subjective*__ -->
+
+
+        <h3>Reflect on how confident you feel using the problem solving techniques and process:</h3>
+
+        <h4>Pseudocode</h4>
+        <p>
+          I thought of myself as pretty confident, although I didn't use it very often. I was unaware that there were some standard conventions for pseudocode out there. They seem pretty strict when compared to how I usually think of pseudocode, but there seems to be some good reasons behind it. I will have to attempt to use more of the conventions, especially when working with others.
+        </p>
+
+        <h4>Trying something</h4>
+        <p>
+          When I'm out of ideas, and/or I don't understand what is going on sometimes I'll use this with console.logging. Changing values, and moving things around to see what happens. This is usually either something of a last resort, or a method of exploration.
+        </p>
+
+        <h4>Rubber ducky method</h4>
+        <p>
+          I first heard about this method in an algorithms paper. I've never really talked to something else, but I sometimes talk aloud to myself while solving problems, which I think sometimes works similarly.
+        </p>
+
+        <h4>Reading error messages</h4>
+        <p>
+          I appreciate knowing that something has gone wrong, but I can find this a bit hit or miss. It depends on the quality of the error message, or whether it's something I know about already. At the very least, it gives me something to plug into Google. This is something that gets easier with knowledge, and occasionally having the right tools.
+        </p>
+
+        <h4>Console.logging</h4>
+        <p>
+          This is my absolute favourite debugging method, you can't beat printing out absolutely everything the program is doing when it comes to figuring out what's going on. I usually default to this. It does have a tendency to make code really messy though.
+        </p>
+
+        <h4>Googling</h4>
+        <p>
+          Another favourite problem solving method, the least judgemental recipient of all my confused queries. Any error message I don't understand gets put into Google's search box.
+        </p>
+
+        <h4>Asking your peers/coaches for help</h4>
+        <p>
+          This is something I do, when I get really stuck. I treat it as a last resort because I'm uncomfortable taking up other people's time for things that I can figure out myself.
+        </p>
+
+        <h4>Improving your process with reflection</h4>
+        <p>
+          I haven't done much of this before starting at EDA. I tended to need a fair amount of distance to reflect of things that hadn't gone well.
+        </p>
+      </main>
+    </div>
+    <div class="row">
+      <footer class="col-12 center-text">
+        <a href="#">Back to top</a>
+      </footer>
+    </div>
+  </div>
+</body>
 </html>
